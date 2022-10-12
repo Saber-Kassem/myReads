@@ -1,0 +1,185 @@
+/* Basic*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+:root {
+  --main-color: #e34140;
+  --second-color: #024b64;
+  --black-color: #000000;
+  --gray-color: #636363;
+  --white-color: #fffaf7;
+}
+html {
+  font-size: 62.5%;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  font-size: 1.8rem;
+  color: var(--white-color);
+}
+
+/* Book List and book*/
+.book-list {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+.wrapper {
+  height: 340px;
+  width: 240px;
+  margin: 20px;
+}
+.book {
+  height: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+.book-top {
+  position: relative;
+  height: 70%;
+  width: 100%;
+  margin-bottom: 3px;
+}
+.book-cover {
+  height: 100%;
+  background-size: cover;
+  background-color: gray;
+  border-radius: 4px;
+}
+
+.book-detail {
+  max-height: 35%;
+  height: 100%;
+  display: flex;
+  font-size: 1.2rem;
+  letter-spacing: 1px;
+  flex-direction: column;
+  justify-content: space-evenly;
+  color: var(--white-color);
+  background-color: var(--black-color);
+}
+.book-title,
+.book-stat {
+  width: 100%;
+  text-align: center;
+  padding: 3px;
+}
+.book-title {
+  font-weight: 900;
+  text-align: center;
+  font-size: 1.4rem;
+  color: var(--white-color);
+}
+.book-title:hover {
+  color: #e34140;
+}
+
+ol.authors {
+  width: 100%;
+  padding: 3px;
+  text-align: left;
+}
+
+/* Shelf Picker*/
+.picker {
+  position: absolute;
+  right: 0;
+  bottom: 1px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #e34140;
+  background-image: url(./icons/arrow-drop-down.svg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 40px;
+}
+.picker select {
+  font-size: 1.5rem;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+}
+link {
+  text-decoration: none;
+  color: #e34140;
+}
+
+.title {
+  text-align: left;
+  font-weight: bold;
+  color: #626d72;
+  margin: 30px 3px 0;
+  padding: 3px 0;
+  border-bottom: 2px solid #ccc;
+}
+.header {
+  font-size: 6rem;
+  padding: 20px;
+  margin-bottom: 70px;
+  background-color: var(--second-color);
+}
+.count {
+  padding: 5px;
+  text-align: left;
+  color: #807f7f;
+}
+.add {
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  top: 90vh;
+  right: 5px;
+  border-radius: 50%;
+  background-color: #e34140;
+  background-image: url(./icons/add.svg);
+}
+
+/* Search Page*/
+
+input[type="text"] {
+  width: 75%;
+  min-width: 190px;
+  height: 3rem;
+  margin: 10px auto 50px;
+  padding: 10px;
+  border-radius: 4px;
+  border: 1px solid #ddd;
+}
+::placeholder {
+  font-size: 1.6rem;
+  color: #ccc;
+}
+.home-link {
+  padding-left: 5vw;
+  margin-top: 20px;
+  text-align: left;
+  font-weight: bold;
+  color: #626d72;
+}
+.home-link:hover {
+  color: #e34140;
+}
+
+.error {
+  max-width: 190px;
+  margin: auto;
+  padding: 5px 0;
+  color: #b42121;
+  text-align: center;
+  background-color: #fae0e0;
+  border: 1px solid #b42121;
+}
+
+option[selected]::before {
+  content: ("U+2713");
+  color: red;
+}
